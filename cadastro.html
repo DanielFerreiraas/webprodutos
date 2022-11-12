@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend>
+                    <strong>Formulário de cliente</strong>
+                </legend>
+                <br>    
+                <div class="inputbox">
+                    <input type="text" name ="nome" id ="nome" required>
+                    <label for="nome">Nome completo</label>
+                </div>
+                <br>
+                <div>
+                    <input type="text" name ="email" id ="email" required>
+                    <label for="nome">Email</label>
+                </div>
+                <br>
+                <div>
+                    <input type="text" name ="telefone" id ="telefone" required>
+                    <label for="nome">Telefone</label>
+                </div>
+                <br>
+                <div>
+                    <p>Sexo:</p>
+                    <input type="radio" name="sexo" id="feminino" value="Feminino" required>
+                    <label for="feminino">Feminino</label>
+                    <br>
+                    <input type="radio" name="sexo" id="masculino" value="masculino" required>
+                    <label for="masculino">Masculino</label>
+                    <br>
+                    <input type="radio" name="sexo" id="outro" value="outro" required>
+                    <label for="outro">Outro</label>
+                    <br>
+                </div>
+                <div class="date">
+                    <label for="data-nascimento"><strong>Data de nascimento:</strong></label>
+                    <input type="date" name ="data-nascimento" id ="data-nascimento" required>
+                </div>
+                <br>
+                <div>
+                    <input type="text" name ="cidade" id ="cidade" required>
+                    <label for="nome">cidade</label>
+                    
+                </div>
+                <br>
+                <div>
+                    <input type="text" name ="estado" id ="estado" required>
+                    <label for="nome">Estado</label>
+                </div>
+                <br>
+                <div>
+                    <input type="endereco" name ="endereco" id ="endereco" required>
+                    <label for="nome">Endereço</label>
+                </div>
+                <br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+* {
+    margin:0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, dodgerblue, midnightblue);
+    text-align: center;
+    color: aliceblue;
+    
+}
+h1 {
+    margin-top: 10%;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    border: 3px solid dodgerblue;
+    border-radius: 10px;
+    padding: 13px
+}
+
+a:hover{
+    background-color: dodgerblue;
+    transition: 1s;
+}
