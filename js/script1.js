@@ -9,10 +9,12 @@ class Produto{
         
         let produto = this.lerDados();
         if(this.validaCampos(produto)) {
+            if(this.editId == null){
             this.adicionar(produto);
-            
+        }else {
+            this.atualizar(this.editId, produto);
         }
-
+    }
         this.listaTabela();
         this.cancelar();
     }
@@ -40,6 +42,7 @@ class Produto{
 
             let imgEdit = document.createElement('img');
             imgEdit.src = 'img/editar.png' ;
+            imgEdit.setAttribute("onclick", "produto.editar("+JSON.stringify(this.arrayProdutos[i])+")");
 
             let imgDelete = document.createElement('img');
             imgDelete.src = 'img/botao-apagar.png' ;
@@ -52,8 +55,35 @@ class Produto{
     }
 
     adicionar(produto){
+        produto.preco = parseFloat(produto.preco);
+        produto.quantidade = parseInt(produto.quantidade);
         this.arrayProdutos.push(produto);
         this.id++;
+        this.editId = null;
+    }
+
+    atualizar(id, produto){
+        
+        for(let i = 0; i < this.arrayProdutos.length; i++){
+            if(this.arrayProdutos[i].id == id){
+                this.arrayProdutos[i].nomeProduto = produto.nomeProduto;
+                this.arrayProdutos[i].valor = produto.valor;
+                this.arrayProdutos[i].quantidade = produto.quantidade;
+                this.arrayProdutos[i].marca = produto.marca;
+            }
+
+        }
+    }
+
+    editar(dados){
+        this.editId =dados.id;
+
+       document.getElementById('produto').value = dados.nomeProduto;
+       document.getElementById('valor').value = dados.valor;
+       document.getElementById('quantidade').value = dados.quantidade;
+       document.getElementById('marca').value = dados.marca;
+
+        document.getElementById('btn1').innerText = 'Atualizar';
     }
 
     lerDados() {
@@ -104,7 +134,9 @@ class Produto{
         document.getElementById('valor').value = '';
         document.getElementById('quantidade').value = '';
         document.getElementById('marca').value = '';
-    
+        document.getElementById('btn1').innerText = 'Salvar';
+        this.editId = null;
+
     }
 
     deletar(id){
