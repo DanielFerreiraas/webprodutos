@@ -76,6 +76,7 @@ class Produto{
     }
 
     editar(dados){
+        
         this.editId =dados.id;
 
        document.getElementById('produto').value = dados.nomeProduto;
@@ -100,31 +101,30 @@ class Produto{
 
     }
 
-    validaCampos(produto){
-        let msg = '';
+     validaCampos(produto){
+         let msg = '';
 
-        if(produto.nomeProduto == ''){
-            msg += '- Informe o nome do produto!\n';
-        }
+          if(produto.nomeProduto == ''){
+              msg += '- Informe o nome do produto!\n';
+          }
 
-        if(produto.valor == ''){
-            msg += '- Informe o Preço do produto!\n';
-        }
+       if(produto.valor == ''){
+        msg += '- Informe o Preço do produto!\n';
+    }
 
         if(produto.quantidade == ''){
-            msg += '- Informe a quantidade do produto!\n';
+         msg += '- Informe a quantidade do produto!\n';
         }
         
-        if(produto.marca == ''){
-            msg += '- Informe a marca do produto!\n';
+    if(produto.marca == ''){
+           msg += '- Informe a marca do produto!\n';
         }
         
         if(msg != ''){
-            alert(msg);
-            return false
-        }
-
-        return true;
+             alert(msg);
+        return false
+         }
+         return true;
 
     }
 

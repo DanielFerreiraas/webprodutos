@@ -1,0 +1,84 @@
+*{
+    
+    margin:0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#fff;
+}
+.tela-login{    
+    background-color:#2c3133;
+    position: absolute;
+    width: 70%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border-radius: 15px;
+    color:#fff;
+
+}
+
+.tela-login a{
+    display: inline;
+}
+
+input{
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    
+}
+.input-entrar{
+    width: 100%;
+    background-color:#dd202a;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: large;
+    
+}
+.input-entrar:hover{
+    background-color:#c7252d;
+    cursor: pointer;
+}
+
+
+.titulo{
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #272a2b;
+}
+
+.fundo{
+
+    background-color:#272a2b;
+    width: 45%;
+    height: 110%;
+    position: absolute;
+    
+}
+img{
+
+    position: absolute;
+    width: 53%;
+    top: 47%;
+    left: 73%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+ 
+}
+.h1{
+    margin-top: 50px;
+    color: #dd202a;
+    margin-left: 177%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    
+}

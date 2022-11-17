@@ -1,21 +1,16 @@
-* {
-    margin: 0;
-}
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
 }
-
-header{
-    background-color:  #dd202a;
-    padding: 10px;
-    color: aliceblue;
+.title{
     text-align: center;
 }
 
 main{
-    padding: 20px 50px;
+    padding: 40px 100px;
+
 }
 
 .card{
@@ -23,22 +18,17 @@ main{
     border: 1px solid #ccc;
     padding: 20px;
     margin-top: 15px;
-    border-radius: 5px;
+    border-radius: 9px;
 
     
 }
 
 .lineinput{
     display: grid;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-input{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    outline: 0;
-}
+
 
 button{
     border: 0;
@@ -46,9 +36,11 @@ button{
     outline: 0;
     background-color: #dd202a;
     color: #fff;
-    border-radius: 2px;
+    border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
+    margin-left: 15px;
+    
 }
 button:hover {
     background-color: #e42a34;
@@ -58,22 +50,18 @@ button:hover {
     margin-top: 10px;
 }
 table{
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    width: 100%;
+    
+    width: 90%;
     text-align: center;
+    margin-top: 20px;
 }
-table th{
-    background-color: #272a2b;
-    color: #fff;
-}
+
 
 table td img{
     width: 25px;
     cursor: pointer;
     padding: 2px;
 }
-.center{
-    align-items: center;
-    
-}
+
+
+

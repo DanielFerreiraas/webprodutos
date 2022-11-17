@@ -3,64 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabela de produtos</title>
+    <script src="js/sweetalert.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/table.css">
     <script src="js/script1.js"></script>
     
 </head>
 <body>
-    <header>
-        <h1>Gerenciamento De Produtos</h1>
-    </header>
-    <main>
+    
+
+     <nav class=" navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+        
+        <a class="navbar-brand" href="#">CustomGenerate</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Opções
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Relatório</a>
+                <a class="dropdown-item" href="#">Novidades</a>
+                <a class="dropdown-item" href="#">Gerar PDF</a>
+                <a class="dropdown-item" href="#">Funcionalidades</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Saiba mais</a>
+              </div>
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+          </form>
+        </div>
+      </nav> 
+      
+     
+      <main>
+
+       <div class="card">
         <div class="title">
-            <h2>produtos</h2>
+            <h2>Relátorio dos Produtos</h2>
             <span>Lista de produtos</span>
         </div>
-        <div class="card">
 
-        <div class="lineinput">
+        <div class="content">
+
+        <div class="col">
             <label>Produto</label>
-            <input type="text" id="produto" placeholder="Nome do produto">
-        </div>
-        <div class="lineinput">
+            <input type="text" id="produto" placeholder="Nome do produto" class="lineinput form-control" required> 
+        </div> 
+        <div class="col">
             <label>Preço</label>
-            <input type="number" id="valor" placeholder="Preço do produto">
-        </div>
-        <div class="lineinput">
+            <input type="number" id="valor" placeholder="Preço do produto" class="lineinput form-control" min="1" required> 
+        </div> 
+        <div class="col">
             <label>Quantidade</label>
-            <input type="number" id="quantidade" placeholder="Quantidade do produto">
-        </div>
-        <div class="lineinput">
+            <input type="number" id="quantidade" placeholder="Quantidade do produto" class="lineinput form-control" min="1" required> 
+        </div> 
+        <div class="col">
             <label>Marca</label>
-            <input type="text" id="marca" placeholder="Marca do produto">
-        </div>
+            <input type="text" id="marca" placeholder="Marca do produto" class="lineinput form-control" required> 
+        </div> 
         
             <button onclick="produto.salvar()" id="btn1">Salvar</button>
             <button onclick="produto.cancelar()">Cancelar</button>
 
         </div>
-        <!-- <div class="content">
-            <table border = 1>
-                <thead>
-                    <th class="center">Cod_Produto</th>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                    <th>Quantidade</th>
-                    <th>Marca</th>
-                    <th id="acoes">Ações</th>
-                </thead> -->
+      
 
-                <table class="table table-hover">
-                    <thead class="thead-dark">
+                <table class="table caption-top table table-hover">
+                    <thead>
                       <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Produto</th>
                         <th scope="col">Preço</th>
                         <th scope="col">Quantidade</th>
                         <th scope="col">Marca</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col"></th>
                       </tr>
                     </thead>
                 <tbody id="tbody">
@@ -68,6 +98,26 @@
                 </tbody>
             </table>
         </div>
+    </div>
+    
     </main>
+    
+      
+     <script type="text/javascript">
+        
+            Swal.fire(
+        'Bem vindo!',
+        'Login feito com sucesso',
+        'success'
+        ) 
+    </script> 
+      
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>

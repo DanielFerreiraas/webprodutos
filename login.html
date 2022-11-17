@@ -4,40 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="stylesheet" href="css/style.css">
+   <script src="js/sweetalert.js"></script>
+    <script src="js/login.js"></script>
+
+    <link rel="stylesheet" href="css/login.css">
 </head>
-<body class="body">
+<body>
    
     <section class="fundo"> 
-        <h1 class="h1">CustomGerenate</h1>
-    <div class="tela-login">
-        <form action="table.html" method="post">
-                <h1>Login</h1>
-                <input type="text" name="usuario" id="usuario" placeholder="Usuário"> <br>
-                <input type="password" name="senha" id="senha" placeholder="Senha"> <br>
-                <input type="submit" name="submit" id="submit" value="Entrar" class="input-entrar"><br> <br>
-                
-                
-                <a href="#" class="p"><p>Lembra-me</p></a>
-                
-                <a href="#" class="p2"><p>Esqueceu a senha?</p></a>
-    </section>           
-          
-        </form>
-    </div>
-    
-        <img src="img/imgfood.png" alt="">
-    
-    
-    <div> 
-        <footer>
-            <section>
-                <p>Desenvolved by: Daniel Ferreira Da Silva &copy;</p>
-            </section>
-        </footer>
-    </div>
 
+        <h1 class="h1">CustomGerenate</h1>
+
+        <div class="tela-login">
+
+            <form action="table.html" method="post">
+                    <h1>Login</h1>
+
+                    <div>
+                        <input type="text" name="usuario" id="usuario" placeholder="Usuário" required> <br>
+                    </div>
+
+                    <div>
+                        <input type="password" name="password" id="password" placeholder="Senha" required> <br>
+                    </div>
+                
+                    
+                    <div>
+                        <input type="submit" name="submit" id="submit" class="input-entrar" value="Entrar" onclick="login();return false"> <br> 
+                    </div>
+                    
+                    
+            </form>
+            
+        </div>
+
+    </section>    
+    
+                    <div>
+                        <img src="img/imgfood.png" alt="">
+                    </div>
+       
 </body>
 </html>
